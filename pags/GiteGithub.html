@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git e GitHub Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border: 1px solid #ddd;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <li><a href="../index.html">Home</a></li>
+    <h1>Git e GitHub Tutorial</h1>
+    <p>O Git e o GitHub são ferramentas essenciais para o desenvolvimento de software colaborativo. Aqui está um tutorial básico:</p>
+
+    <h2>O que é Git?</h2>
+    <p>O Git é um sistema de controle de versão que permite rastrear alterações em arquivos ao longo do tempo.</p>
+
+    <h2>O que é GitHub?</h2>
+    <p>O GitHub é uma plataforma de hospedagem de código que usa o Git. Ele permite que equipes colaborem em projetos e compartilhem código.</p>
+
+    <h2>Configurando Chaves SSH</h2>
+    <p>Configurar chaves SSH ajuda a autenticar com segurança no GitHub:</p>
+    <ol>
+        <li>Gerar uma chave SSH: <code>ssh-keygen -t rsa -b 4096 -C "seu-email@example.com"</code></li>
+        <li>Adicionar a chave ao SSH-Agent: <code>eval "$(ssh-agent -s)"<br>ssh-add ~/.ssh/id_rsa</code></li>
+        <li>Copiar a chave pública: <code>clip < ~/.ssh/id_rsa.pub</code> (ou use a chave em <code>~/.ssh/id_rsa.pub</code>)</li>
+        <li>No GitHub, vá para "Settings" > "SSH and GPG keys" > "New SSH Key" e cole a chave.</li>
+    </ol>
+
+    <h2>Criando e Clonando um Repositório</h2>
+    <p>Para criar e clonar um repositório:</p>
+    <ol>
+        <li>Criar um novo repositório no GitHub.</li>
+        <li>Clone o repositório para sua máquina: <code>git clone https://github.com/seu-usuario/seu-repositorio.git</code></li>
+        <li>Adicione arquivos e faça commits: <code>git add .<br>git commit -m "Primeiro commit"</code></li>
+        <li>Envie as alterações de volta ao GitHub: <code>git push origin master</code></li>
+    </ol>
+
+    <footer>
+        <p>&copy; 2023 Git e GitHub Tutorial. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
